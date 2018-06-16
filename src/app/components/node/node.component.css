@@ -1,0 +1,17 @@
+.node {
+    background-color: #fff;
+    box-shadow: 0 1px 1px #ccc;
+}
+
+:host {
+    margin: 1rem;
+    display: inline;
+    float: left;
+}
+
+.number {
+    margin: auto 1rem;
+    color: #212121;
+    font-size: 2rem;
+    text-align: center;
+}

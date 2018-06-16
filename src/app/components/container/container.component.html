@@ -1,3 +1,8 @@
-<p>
-  container works!
-</p>
+<div *ngFor="let arr of numbers">
+    <div *ngFor="let i of arr" class="arr">
+        <app-node [number]="i"></app-node>
+    </div>
+    <br />
+    <br />
+    <br />
+</div>

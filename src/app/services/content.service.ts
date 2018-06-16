@@ -4,7 +4,7 @@ import { of } from 'rxjs/observable/of';
 @Injectable()
 export class ContentService {
 
-  number$: Observable<number>;
+  number$: Observable<number> = of(5);
   constructor() { }
 
   setNumber(number): void {
