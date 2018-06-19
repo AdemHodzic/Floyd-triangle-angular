@@ -1,10 +1,32 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { ContentService } from '../../services/content.service';
+import {
+  trigger,
+  state,
+  style,
+  animate,
+  transition,
+  group
+} from '@angular/animations';
+
 @Component({
   selector: 'app-container',
   templateUrl: './container.component.html',
-  styleUrls: ['./container.component.css']
+  styleUrls: ['./container.component.css'],
+  animations: [
+    trigger('animated', [
+      transition('void <=> *', [
+        style({ transform: 'scale(0.1)', opacity: 0}),
+        group([
+          animate('1s ease', style({
+            transform: 'scale(1)',
+            opacity: 1
+          }))
+        ])
+      ]),
+    ])
+  ]
 })
 export class ContainerComponent implements OnInit {
 
